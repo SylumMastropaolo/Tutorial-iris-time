@@ -1,0 +1,26 @@
+{
+  "name": "iris-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/run.js",
+  "scripts": {
+    "start": "nodemon | ./node_modules/.bin/bunyan",
+    "test": "NODE_ENV=test eslint bin server && nyc mocha --recursive test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "dotenv": "^6.0.0",
+    "express": "^4.14.0",
+    "moment": "^2.22.2",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "should": "^13.2.3",
+    "supertest": "^3.3.0"
+  }
+}
