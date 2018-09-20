@@ -7,6 +7,13 @@
     "start": "nodemon | ./node_modules/.bin/bunyan",
     "test": "NODE_ENV=test eslint bin server && nyc mocha --recursive test"
   },
+  "engines": {
+    "node": "8.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SylumMastropaolo/Tutorial-iris-time.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
