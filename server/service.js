@@ -8,6 +8,11 @@ const moment = require('moment');
 module.exports = (config) => {
     const log = config.log();
     service.get('/service/:location', (req, res) => {
+        
+        if(req.get('X-IRIS-SERVICE-TOKEN') !== config.serviceAccessToken) {
+            return res.sendStatus(403);
+        }
+        
         request.get('https://api.opencagedata.com/geocode/v1/json?q=' + req.params.location + '&key=' + config.opencageApiKey + '&limit=1&pretty=1', (err, response) => {
             if(err) {
                 log.error(err);
